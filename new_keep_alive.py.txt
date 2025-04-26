@@ -1,0 +1,33 @@
+new_keep_alive.py
+
+from flask import Flask
+import threading
+import logging
+
+# Configure logging
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+
+logger = logging.getLogger('new_keep_alive')
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is alive!"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    """Inicia o servidor web em uma thread separada para manter o bot ativo"""
+    logger.info("Iniciando servidor web na porta 8080")
+    
+    # Start the web server in a background thread
+    server_thread = threading.Thread(target=run)
+    server_thread.daemon = True  # Set as daemon so it doesn't block program exit
+    server_thread.start()
+    
+    logger.info("Servidor web iniciado em background thread")

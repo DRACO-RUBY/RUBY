@@ -1,0 +1,714 @@
+report_templates.json
+
+{
+  "baixa": {
+    "100": {
+      "title": "Ausente",
+      "description": "Endereço localizado, mas o cliente não se encontrava no local no momento da visita. O técnico tentou contato pelo interfone/telefone e aguardou por 5 minutos. A atividade será reagendada. Encaminhado ao COP para validação da visita."
+    },
+    "101": {
+      "title": "Recusou Visita",
+      "description": "Cliente recusou a realização do atendimento no momento da visita técnica. O técnico explicou a importância do serviço, mas o cliente solicitou novo agendamento. Encaminhado ao COP para validação da visita."
+    },
+    "102": {
+      "title": "Acesso não autorizado",
+      "description": "O técnico não recebeu autorização para acessar o local de instalação. O acesso foi negado pelo porteiro/segurança do condomínio ou residência. Necessário novo agendamento com autorização prévia. Encaminhado ao COP para validação da visita."
+    },
+    "103": {
+      "title": "Chuva",
+      "description": "A execução do serviço foi impossibilitada devido à ocorrência de chuvas intensas no momento da visita técnica. A atividade será reagendada conforme as condições climáticas permitirem. Encaminhado ao COP para validação da visita."
+    },
+    "104": {
+      "title": "Vendaval",
+      "description": "Devido a fortes ventos no momento da visita, não foi possível executar a atividade com segurança. A condição climática adversa impossibilitou o trabalho em altura. A atividade será reagendada. Encaminhado ao COP para validação da visita."
+    },
+    "105": {
+      "title": "Área de risco",
+      "description": "Local identificado como área de risco, com presença de conflitos ou situações que possam comprometer a segurança do técnico. A atividade será reagendada com escolta ou avaliada quanto à viabilidade técnica. Encaminhado ao COP para validação da visita."
+    },
+    "106": {
+      "title": "Infraestrutura inadequada",
+      "description": "Foi constatada a necessidade de adequações na infraestrutura do cliente antes da execução do serviço. Necessário realizar adaptações elétricas/estruturais prévias para possibilitar a instalação. Encaminhado ao COP para validação da visita."
+    },
+    "107": {
+      "title": "Poste inadequado",
+      "description": "O poste disponível no local não atende aos requisitos técnicos para instalação (baixa altura, má conservação ou tipo inadequado). Necessária substituição ou adequação do poste para prosseguimento da instalação. Encaminhado ao COP para validação da visita."
+    },
+    "108": {
+      "title": "Falta de documentação",
+      "description": "Cliente não apresentou a documentação necessária para a realização do serviço (documento com foto, procuração ou outro documento exigido). Necessário novo agendamento após regularização. Encaminhado ao COP para validação da visita."
+    },
+    "109": {
+      "title": "Endereço não localizado",
+      "description": "Não foi possível localizar o endereço informado na ordem de serviço. O técnico realizou buscas no entorno e tentou contato com o cliente sem sucesso. Necessário confirmar o endereço correto para reagendamento. Encaminhado ao COP para validação da visita."
+    },
+    "110": {
+      "title": "Atividade cancelada pelo cliente",
+      "description": "O cliente solicitou o cancelamento da atividade no momento da visita técnica. Motivo informado: cliente desistiu do serviço. Encaminhado ao COP para validação da visita e baixa na ordem de serviço."
+    },
+    "111": {
+      "title": "Aguardando infraestrutura do cliente",
+      "description": "Cliente não finalizou as adequações de infraestrutura necessárias para a execução do serviço. A atividade será reagendada após a conclusão das adaptações internas. Encaminhado ao COP para validação da visita."
+    },
+    "112": {
+      "title": "Falta de equipamentos/materiais",
+      "description": "Não foi possível executar a atividade devido à indisponibilidade de equipamentos ou materiais específicos necessários para este serviço. A atividade será reagendada após a regularização do estoque. Encaminhado ao COP para validação da visita."
+    },
+    "113": {
+      "title": "Falta de ferramentas",
+      "description": "A execução da atividade foi impossibilitada pela falta de ferramentas específicas necessárias para este tipo de instalação/manutenção. A atividade será reagendada com o kit completo. Encaminhado ao COP para validação da visita."
+    },
+    "114": {
+      "title": "Problema em sistema",
+      "description": "Ocorreu instabilidade ou falha no sistema operacional durante a execução da atividade, impossibilitando a conclusão do serviço. A atividade será reagendada após a normalização do sistema. Encaminhado ao COP para validação da visita."
+    },
+    "115": {
+      "title": "Veículo com problemas",
+      "description": "O veículo da equipe técnica apresentou problemas mecânicos, impossibilitando o deslocamento até o local ou durante o atendimento. A atividade será reagendada após a manutenção do veículo. Encaminhado ao COP para validação da visita."
+    },
+    "116": {
+      "title": "Licença médica",
+      "description": "O técnico designado para esta atividade encontra-se em licença médica. A atividade será redistribuída e reagendada com outra equipe técnica disponível. Encaminhado ao COP para validação da visita."
+    },
+    "117": {
+      "title": "Acidente de trânsito",
+      "description": "A equipe técnica sofreu ou foi retida devido a acidente de trânsito durante o deslocamento para a atividade, impossibilitando o cumprimento do horário agendado. A atividade será reagendada. Encaminhado ao COP para validação da visita."
+    },
+    "118": {
+      "title": "Bloqueio viário",
+      "description": "O acesso ao local da instalação estava impossibilitado devido a bloqueio viário (manifestação, obra, acidente ou evento). A atividade será reagendada após a normalização do acesso. Encaminhado ao COP para validação da visita."
+    },
+    "119": {
+      "title": "Serviço já realizado",
+      "description": "Ao chegar no local, foi constatado que o serviço solicitado já havia sido executado por outra equipe técnica. Verificado com o cliente a satisfação com o serviço anterior. Encaminhado ao COP para validação da visita e baixa na ordem de serviço."
+    },
+    "120": {
+      "title": "Duplicidade de OS",
+      "description": "Foi identificado que existem múltiplas ordens de serviço para a mesma atividade e localidade. O serviço será executado conforme a ordem original e as demais serão canceladas por duplicidade. Encaminhado ao COP para validação e correção."
+    },
+    "121": {
+      "title": "Cliente solicitou reagendamento",
+      "description": "O cliente solicitou o reagendamento da visita técnica para uma data posterior por motivos particulares. Nova data será acordada conforme disponibilidade de agenda. Encaminhado ao COP para validação da visita e reagendamento."
+    },
+    "122": {
+      "title": "Serviço parcialmente executado",
+      "description": "A atividade foi iniciada mas não pôde ser concluída por fatores externos (falta de material específico, tempo insuficiente ou condição técnica). Será necessário reagendamento para conclusão do serviço. Encaminhado ao COP para validação da visita."
+    },
+    "123": {
+      "title": "Local com restrição de horário",
+      "description": "O local apresenta restrições de horário para execução de serviços técnicos (condomínio, estabelecimento comercial ou área com regulamentação específica). Necessário reagendamento dentro do horário permitido. Encaminhado ao COP para validação da visita."
+    },
+    "124": {
+      "title": "Força maior - Falta de energia",
+      "description": "A atividade foi impossibilitada devido à falta de energia elétrica no local, impedindo testes e configurações necessárias. Serviço será reagendado após normalização do fornecimento. Encaminhado ao COP para validação da visita."
+    },
+    "125": {
+      "title": "Força maior - Alagamento",
+      "description": "Impossibilidade de acesso ao local devido a alagamento na via ou na área da instalação. O serviço será reagendado após normalização das condições de acesso e segurança. Encaminhado ao COP para validação da visita."
+    },
+    "126": {
+      "title": "Troca de escopo durante a visita",
+      "description": "Durante a visita, foi identificada a necessidade de alteração no escopo do serviço originalmente solicitado, exigindo nova avaliação técnica ou equipamentos específicos. Será necessário reagendamento. Encaminhado ao COP para validação."
+    },
+    "127": {
+      "title": "Cliente ausente - Segunda tentativa",
+      "description": "Segunda tentativa de visita sem sucesso devido à ausência do cliente. O técnico aguardou por 5 minutos e tentou contato via telefone/interfone. A atividade será cancelada após duas tentativas sem sucesso. Encaminhado ao COP para validação da visita."
+    },
+    "128": {
+      "title": "Problema técnico de maior complexidade",
+      "description": "Durante a visita foi identificado um problema técnico de maior complexidade que requer especialista, ferramentas ou equipamentos específicos não disponíveis no momento. O serviço será reagendado com equipe especializada. Encaminhado ao COP para validação."
+    },
+    "129": {
+      "title": "Impossibilidade técnica definitiva",
+      "description": "Após avaliação técnica detalhada, foi constatada a impossibilidade definitiva de realização do serviço solicitado devido a condições estruturais ou técnicas do local que não podem ser adaptadas. Encaminhado ao COP para validação e encerramento."
+    },
+    "130": {
+      "title": "Falta de autorização para intervenção estrutural",
+      "description": "O cliente não possui autorização do proprietário/condomínio para realizar intervenções estruturais necessárias para a instalação. O serviço será reagendado após obtenção da autorização formal. Encaminhado ao COP para validação da visita."
+    },
+    "131": {
+      "title": "Capacidade técnica excedida",
+      "description": "Durante a avaliação, foi constatado que a instalação excede os limites técnicos suportados para o serviço padrão (distância, quantidade de pontos ou complexidade). Necessário projeto específico. Encaminhado ao COP para validação e reavaliação."
+    },
+    "132": {
+      "title": "Condições climáticas adversas - Outros",
+      "description": "As condições climáticas adversas (granizo, neblina intensa, tempestade elétrica) impossibilitaram a execução segura da atividade. O serviço será reagendado quando as condições permitirem. Encaminhado ao COP para validação da visita."
+    },
+    "133": {
+      "title": "Problemas com escada",
+      "description": "A escada disponível para a equipe técnica apresentou problemas ou não atendia aos requisitos de segurança/altura necessários para a instalação. O serviço será reagendado com equipamento adequado. Encaminhado ao COP para validação da visita."
+    },
+    "134": {
+      "title": "Falta de ponto de fixação adequado",
+      "description": "No local não foi identificado ponto de fixação adequado para a instalação do equipamento, conforme normas técnicas de segurança. Necessário avaliar alternativas de instalação. Encaminhado ao COP para validação da visita."
+    },
+    "135": {
+      "title": "Animal solto impedindo acesso",
+      "description": "O acesso ao local de instalação foi impedido pela presença de animal solto que oferecia risco à segurança do técnico. O serviço será reagendado com solicitação prévia de contenção do animal. Encaminhado ao COP para validação da visita."
+    },
+    "136": {
+      "title": "Endereço incorreto na ordem de serviço",
+      "description": "O endereço registrado na ordem de serviço está incorreto ou incompleto, impossibilitando a localização exata do ponto de instalação. Necessário confirmar dados e reagendar visita. Encaminhado ao COP para validação e correção."
+    },
+    "137": {
+      "title": "Informações de contato incorretas",
+      "description": "Os dados de contato do cliente registrados na ordem de serviço estão incorretos ou desatualizados, impossibilitando a comunicação para confirmação da visita. Necessário atualizar informações. Encaminhado ao COP para validação e correção."
+    },
+    "138": {
+      "title": "Solicitação fora da área de cobertura",
+      "description": "Após avaliação in loco, foi constatado que o endereço está fora da área de cobertura disponível para o serviço solicitado. Necessário verificar viabilidade técnica especial. Encaminhado ao COP para validação e análise de viabilidade."
+    },
+    "139": {
+      "title": "Incompatibilidade de equipamento",
+      "description": "Foi identificada incompatibilidade entre o equipamento disponível e a infraestrutura do cliente, impossibilitando a instalação no formato padrão. Necessário estudo técnico específico. Encaminhado ao COP para validação e avaliação."
+    },
+    "140": {
+      "title": "Cliente não permitiu acesso ao local de instalação",
+      "description": "Mesmo presente, o cliente recusou permitir acesso do técnico ao local necessário para a instalação do equipamento (telhado, parede específica ou área técnica). Encaminhado ao COP para validação da visita e contato com o cliente."
+    },
+    "141": {
+      "title": "Necessidade de projeto especial",
+      "description": "Durante a visita, foi identificada a necessidade de elaboração de projeto técnico especial devido à complexidade ou particularidades da instalação. O serviço será reagendado após análise técnica. Encaminhado ao COP para validação."
+    },
+    "142": {
+      "title": "Local em obras",
+      "description": "O local designado para instalação encontra-se em obras, impossibilitando a execução do serviço no momento. A atividade será reagendada após a conclusão das obras em andamento. Encaminhado ao COP para validação da visita."
+    },
+    "143": {
+      "title": "Necessidade de segunda opinião técnica",
+      "description": "Durante a avaliação, foram encontradas condições técnicas que requerem análise de especialista ou supervisor para definir a melhor solução. O serviço será reagendado após parecer técnico. Encaminhado ao COP para validação da visita."
+    },
+    "144": {
+      "title": "Problema no cadastro do cliente",
+      "description": "Foi identificada inconsistência no cadastro do cliente que impede a conclusão do serviço (divergência de titularidade, CPF/CNPJ ou informações contratuais). Necessário regularização. Encaminhado ao COP para validação e correção."
+    },
+    "145": {
+      "title": "Equipamento com defeito - Cliente",
+      "description": "O equipamento do cliente necessário para a instalação ou configuração apresenta defeito que impossibilita a conclusão do serviço. Necessário substituição ou reparo prévio. Encaminhado ao COP para validação da visita."
+    },
+    "146": {
+      "title": "Equipamento com defeito - Técnico",
+      "description": "O equipamento técnico necessário para a instalação apresentou defeito durante a visita, impossibilitando a conclusão do serviço. A atividade será reagendada com equipamento em perfeito funcionamento. Encaminhado ao COP para validação da visita."
+    },
+    "147": {
+      "title": "Problema na ordem de serviço",
+      "description": "Foi identificada inconsistência na ordem de serviço que impossibilita a execução correta da atividade (escopo incorreto, informações contraditórias ou falta de detalhamento). Encaminhado ao COP para validação e correção."
+    },
+    "148": {
+      "title": "Necessidade de equipe adicional",
+      "description": "Durante a avaliação técnica, foi identificada a necessidade de equipe adicional para conclusão segura e eficiente do serviço devido à complexidade da instalação. Será reagendado com equipe completa. Encaminhado ao COP para validação."
+    },
+    "149": {
+      "title": "Cliente desistiu durante a execução",
+      "description": "O cliente solicitou a interrupção do serviço durante sua execução e manifestou desistência da instalação. O técnico confirmou a decisão e encerrou a visita. Encaminhado ao COP para validação e baixa na ordem de serviço."
+    },
+    "150": {
+      "title": "Indisponibilidade temporária de sinal",
+      "description": "Foi detectada indisponibilidade temporária de sinal na região, impossibilitando os testes necessários para a conclusão da instalação. O serviço será reagendado após normalização do sinal. Encaminhado ao COP para validação."
+    },
+    "151": {
+      "title": "Força maior - Apagão regional",
+      "description": "A região encontra-se afetada por apagão elétrico generalizado, impossibilitando a execução e testes do serviço solicitado. A atividade será reagendada após normalização do fornecimento de energia. Encaminhado ao COP para validação."
+    },
+    "152": {
+      "title": "Local fechado/interditado",
+      "description": "O local designado para a instalação encontra-se fechado ou interditado por autoridades, impossibilitando o acesso para realização do serviço. Atividade será reagendada após liberação do local. Encaminhado ao COP para validação."
+    },
+    "153": {
+      "title": "Cliente sob efeito de substâncias",
+      "description": "Durante a visita, o cliente apresentava sinais de estar sob efeito de substâncias que comprometiam a comunicação clara e a tomada de decisões. Por segurança, o serviço será reagendado. Encaminhado ao COP para validação."
+    },
+    "154": {
+      "title": "Cliente agressivo/alterado",
+      "description": "O cliente apresentou comportamento agressivo ou alterado durante a visita, comprometendo a segurança do técnico e impossibilitando a execução do serviço. Necessário avaliação para reagendamento. Encaminhado ao COP para validação."
+    },
+    "155": {
+      "title": "Eventos especiais na região",
+      "description": "A região encontra-se impactada por evento especial (show, manifestação, evento esportivo) que restringe o acesso ou impede a permanência pelo tempo necessário para o serviço. Será reagendado. Encaminhado ao COP para validação."
+    },
+    "156": {
+      "title": "Erro de agendamento",
+      "description": "Foi identificado erro no processo de agendamento (data incorreta, horário invalido ou endereço duplicado). O técnico confirmou a inconsistência com o cliente. Necessário reagendamento correto. Encaminhado ao COP para validação."
+    },
+    "157": {
+      "title": "Sobrecarga de agendamentos",
+      "description": "Devido a sobrecarga excepcional de agendamentos na região, não foi possível atender este cliente dentro da janela de horário prevista. O serviço será reagendado com prioridade. Encaminhado ao COP para validação."
+    },
+    "158": {
+      "title": "Visita não autorizada pelo contratante",
+      "description": "A pessoa presente no local não é o contratante e não possui autorização formal para permitir a execução do serviço. Necessário reagendamento com presença do titular ou autorização expressa. Encaminhado ao COP para validação."
+    },
+    "159": {
+      "title": "Cliente menor de idade desacompanhado",
+      "description": "No local havia apenas menor de idade desacompanhado, sem autorização dos responsáveis para acompanhar a execução do serviço. Por questões legais, o serviço será reagendado. Encaminhado ao COP para validação da visita."
+    },
+    "560": {
+      "title": "Equipamento não recuperado",
+      "description": "Após tentativas de recuperação do equipamento com defeito, não foi possível restaurar o seu funcionamento. Foi realizada a substituição completa do dispositivo por um novo, configurado e testado juntamente com o cliente."
+    },
+    "561": {
+      "title": "Caixa de Emenda Danificada",
+      "description": "Foi identificada caixa de emenda óptica danificada que causava interrupções intermitentes no serviço. Realizada a substituição completa da caixa de emenda, incluindo a refusão de todas as fibras afetadas. Serviço normalizado e testado."
+    },
+    "562": {
+      "title": "SWT ONU",
+      "description": "Realizada a substituição da ONU que apresentava falhas de conexão. O novo equipamento foi instalado, configurado e testado em todos os pontos de acesso. Confirmada a estabilidade da conexão durante e após os testes."
+    },
+    "563": {
+      "title": "Jumper Óptico com Defeito",
+      "description": "Identificado e substituído o jumper óptico que apresentava defeito, comprometendo a qualidade do sinal. Após a troca, foram realizados testes de potência e verificada a normalização completa da conexão."
+    },
+    "564": {
+      "title": "Problemas intermitentes solucionados",
+      "description": "Cliente relatava problemas intermitentes de conexão. Realizado diagnóstico completo que identificou múltiplos fatores contribuintes. Foram executados ajustes de configuração, otimização de sinal e substituição preventiva de conectores. Serviço normalizado."
+    },
+    "565": {
+      "title": "Conector Óptico Danificado",
+      "description": "Identificado e substituído conector óptico danificado que comprometia a qualidade do sinal. O novo conector foi instalado seguindo as especificações técnicas e testado, apresentando níveis de sinal dentro dos parâmetros ideais."
+    },
+    "566": {
+      "title": "Cabo Drop Danificado",
+      "description": "O cabo drop encontrava-se danificado (cortado ou rompido), comprometendo o funcionamento do serviço. Foi realizada a substituição completa do trecho afetado, incluindo novos conectores e testes de funcionamento."
+    },
+    "567": {
+      "title": "Cordão Óptico Danificado",
+      "description": "Identificado cordão óptico danificado que causava instabilidade na conexão. Realizada a substituição por novo cordão, seguida de testes de potência que confirmaram a normalização do serviço."
+    },
+    "568": {
+      "title": "Roseta Danificada",
+      "description": "A roseta óptica apresentava danos físicos que comprometiam a conexão. Foi realizada a substituição completa da roseta, incluindo reposicionamento adequado e fixação segura, seguida de testes de funcionamento."
+    },
+    "569": {
+      "title": "CEO - Caixa de Emenda Óptica",
+      "description": "Realizada manutenção na caixa de emenda óptica que apresentava problemas de vedação e organização interna, causando degradação do sinal. Foram refeitas as fusões necessárias e aplicada vedação adequada."
+    },
+    "570": {
+      "title": "Realizada instalação de jumper",
+      "description": "Instalado novo jumper óptico para otimização da rota de conexão, eliminando problemas de atenuação excessiva. O serviço incluiu a fixação adequada e testes que confirmaram a melhoria na qualidade do sinal."
+    },
+    "571": {
+      "title": "ONU Ressincronizada",
+      "description": "A ONU apresentava problemas de sincronização com a rede. Foi realizado procedimento completo de ressincronização, incluindo reset de fábrica e reconfiguração de todos os parâmetros. Conexão normalizada após o procedimento."
+    },
+    "572": {
+      "title": "Substituição de PTO",
+      "description": "O Ponto de Terminação Óptica apresentava danos que comprometiam a conexão. Foi realizada a substituição completa do PTO, incluindo a reorganização das fibras e novos encaixes. Serviço testado e normalizado."
+    },
+    "573": {
+      "title": "Rede Interna Otimizada",
+      "description": "Realizada otimização da rede interna do cliente, incluindo reorganização do cabeamento, eliminação de emendas desnecessárias e ajustes de rotas para reduzir interferências. Serviço testado em todos os pontos de acesso."
+    },
+    "574": {
+      "title": "Wi-Fi Otimizado",
+      "description": "Realizados ajustes nas configurações de Wi-Fi para melhorar cobertura e desempenho, incluindo otimização de canal, posicionamento de equipamentos e configurações de segurança. Cliente orientado sobre melhores práticas de uso."
+    },
+    "575": {
+      "title": "Fibra Óptica Rompida",
+      "description": "Identificado rompimento na fibra óptica que causava a interrupção total do serviço. Realizada fusão da fibra afetada e testes de potência que confirmaram a restauração completa da conexão dentro dos parâmetros ideais."
+    },
+    "576": {
+      "title": "Reparo em Splitter",
+      "description": "Identificado e reparado problema no splitter óptico que causava degradação do sinal. O trabalho incluiu reposicionamento, limpeza de conectores e testes de potência em todas as saídas, confirmando a normalização."
+    },
+    "577": {
+      "title": "Troca de Fonte da ONU",
+      "description": "A fonte de alimentação da ONU apresentava falhas que causavam reinicializações frequentes do equipamento. Realizada a substituição por nova fonte original, seguida de testes de estabilidade que confirmaram a resolução."
+    },
+    "578": {
+      "title": "Refusão Urgente",
+      "description": "Realizado procedimento de refusão de fibra em caráter urgente devido à perda crítica de sinal. A intervenção incluiu preparação adequada das extremidades e fusão precisa, com testes que confirmaram a recuperação total do sinal."
+    },
+    "579": {
+      "title": "Sinal Óptico Normalizado",
+      "description": "O cliente apresentava problemas de instabilidade devido à degradação do sinal óptico. Foram realizadas intervenções no trecho afetado, incluindo limpeza de conectores e ajustes nas terminações, normalizando o nível de sinal."
+    },
+    "580": {
+      "title": "Hardware com defeito",
+      "description": "Identificado defeito de hardware que comprometia o funcionamento adequado do equipamento. Realizada a substituição completa da unidade afetada, seguida de configuração e testes extensivos que confirmaram a resolução."
+    },
+    "581": {
+      "title": "Troca de Switch",
+      "description": "O switch apresentava falhas em portas e instabilidade geral. Realizada a substituição por equipamento novo, incluindo transferência de configurações e testes de conectividade em todos os pontos de rede. Funcionamento normalizado."
+    },
+    "582": {
+      "title": "Ajuste de Potência Óptica",
+      "description": "Realizados ajustes no sistema para normalização dos níveis de potência óptica que estavam fora dos parâmetros ideais. A intervenção incluiu otimização de rotas e ajustes nos conectores, resultando em melhoria significativa na estabilidade."
+    },
+    "583": {
+      "title": "Cabeamento Inadequado Substituído",
+      "description": "Identificado e substituído cabeamento inadequado que não suportava a capacidade contratada. Instalado novo cabeamento de categoria apropriada, seguindo normas técnicas, com testes que confirmaram o desempenho esperado."
+    },
+    "584": {
+      "title": "Adaptador Óptico Substituído",
+      "description": "Realizada a substituição de adaptador óptico que apresentava desgaste e causava instabilidade na conexão. O novo componente foi instalado com alinhamento preciso, seguido de testes que confirmaram a normalização do serviço."
+    },
+    "585": {
+      "title": "Redimensionamento de Rede",
+      "description": "Realizado redimensionamento da rede interna para melhor atender às necessidades do cliente. O trabalho incluiu redistribuição de pontos de acesso, ajustes em equipamentos e otimização geral da topologia, com testes completos."
+    },
+    "586": {
+      "title": "Manutenção Preventiva",
+      "description": "Executada manutenção preventiva para evitar futuras falhas no sistema. Foram realizadas limpezas em conectores ópticos, verificação de potência, ajustes de fixação e testes gerais de desempenho, garantindo maior estabilidade."
+    },
+    "587": {
+      "title": "Eliminação de Fonte de Interferência",
+      "description": "Identificada e eliminada fonte de interferência que comprometia o desempenho da rede. A solução envolveu reposicionamento de equipamentos, blindagem de cabos e ajustes de configuração para minimizar impactos, com resultados positivos confirmados."
+    },
+    "588": {
+      "title": "Conectorização Refeita",
+      "description": "A conectorização apresentava problemas técnicos que comprometiam a qualidade do sinal. Todo o processo foi refeito seguindo especificações técnicas precisas, resultando em melhoria significativa nos parâmetros de conexão."
+    },
+    "589": {
+      "title": "Terminação Óptica Otimizada",
+      "description": "Realizada otimização da terminação óptica que apresentava imperfeições. O procedimento incluiu polimento adequado, limpeza especializada e ajustes precisos, resultando em melhoria significativa na qualidade do sinal."
+    },
+    "590": {
+      "title": "Porta Ethernet Substituída",
+      "description": "Identificado problema na porta ethernet que impossibilitava a conexão estável. Foi realizado o redirecionamento para porta funcional e, em seguida, a substituição completa do equipamento afetado, com testes que confirmaram a resolução."
+    },
+    "591": {
+      "title": "Configuração Avançada Implementada",
+      "description": "Implementadas configurações avançadas para otimizar o desempenho da rede conforme necessidades específicas do cliente. Foram aplicados ajustes em QoS, segmentação de rede e protocolos de roteamento, com resultados positivos."
+    },
+    "592": {
+      "title": "Sistema Reinicializado",
+      "description": "Realizado procedimento completo de reinicialização do sistema para resolução de problemas de software que causavam instabilidade. O processo incluiu backup de configurações, reset controlado e restauração otimizada dos parâmetros."
+    },
+    "593": {
+      "title": "Substituição de Receptor Óptico",
+      "description": "O receptor óptico apresentava sensibilidade reduzida, comprometendo a qualidade do serviço. Foi realizada a substituição completa do componente, seguida de calibração e testes que confirmaram a normalização dos parâmetros."
+    },
+    "594": {
+      "title": "Falha Intermitente Solucionada",
+      "description": "Identificada e solucionada falha intermitente que comprometia a estabilidade do serviço em horários específicos. A solução envolveu análise detalhada de padrões de tráfego e ajustes preventivos nos componentes afetados."
+    },
+    "595": {
+      "title": "Atualização de Firmware",
+      "description": "Realizada atualização de firmware para corrigir vulnerabilidades e melhorar o desempenho do equipamento. O processo foi executado com backup preventivo e verificação completa após a atualização, confirmando a melhoria."
+    },
+    "596": {
+      "title": "Recuperação de Serviço Crítico",
+      "description": "Executado procedimento de emergência para recuperação de serviço crítico que apresentava falha total. A intervenção envolveu diagnóstico rápido e ação precisa nos componentes afetados, restabelecendo o funcionamento integral."
+    },
+    "597": {
+      "title": "Ajustes Finais em Nova Instalação",
+      "description": "Realizados ajustes finais em instalação recente que apresentava pequenas inconsistências. Foram feitas otimizações em configurações, fixações complementares e testes abrangentes, garantindo o funcionamento ideal do sistema."
+    },
+    "598": {
+      "title": "Recuperação de Sistema após Queda de Energia",
+      "description": "Sistema apresentava instabilidade após queda de energia. Realizado procedimento completo de verificação, reinicialização controlada e recalibração de parâmetros, restabelecendo o funcionamento normal de todos os componentes."
+    },
+    "599": {
+      "title": "Reconfiguração Completa",
+      "description": "Executada reconfiguração completa do sistema para resolver problemas crônicos de desempenho. Foram redefinidos todos os parâmetros críticos, otimizadas rotas de conexão e aplicadas configurações personalizadas para máxima eficiência."
+    }
+  },
+  "fac": {
+    "100": {
+      "fato": "Ausente",
+      "causa": "Endereço localizado, mas o cliente não se encontrava no local no momento da visita técnica.",
+      "acao": "O técnico tentou contato pelo interfone/telefone e aguardou por 5 minutos. A atividade será reagendada.",
+      "obs": "✅ Encaminhado ao COP para validação da visita."
+    },
+    "101": {
+      "fato": "Recusou Visita",
+      "causa": "Cliente recusou a realização do atendimento no momento da visita técnica.",
+      "acao": "O técnico explicou a importância do serviço, mas o cliente solicitou novo agendamento.",
+      "obs": "✅ Encaminhado ao COP para validação da visita."
+    },
+    "102": {
+      "fato": "Acesso não autorizado",
+      "causa": "O técnico não recebeu autorização para acessar o local de instalação.",
+      "acao": "Necessário novo agendamento com autorização prévia para acesso ao local.",
+      "obs": "✅ O acesso foi negado pelo porteiro/segurança do condomínio ou residência. Encaminhado ao COP para validação da visita."
+    },
+    "103": {
+      "fato": "Chuva",
+      "causa": "A execução do serviço foi impossibilitada devido à ocorrência de chuvas intensas no momento da visita técnica.",
+      "acao": "A atividade será reagendada conforme as condições climáticas permitirem.",
+      "obs": "✅ Encaminhado ao COP para validação da visita."
+    },
+    "104": {
+      "fato": "Vendaval",
+      "causa": "Fortes ventos no momento da visita impossibilitaram a execução da atividade com segurança.",
+      "acao": "A atividade será reagendada após normalização das condições climáticas.",
+      "obs": "✅ A condição climática adversa impossibilitou o trabalho em altura. Encaminhado ao COP para validação da visita."
+    },
+    "105": {
+      "fato": "Área de risco",
+      "causa": "Local identificado como área de risco, com situações que possam comprometer a segurança do técnico.",
+      "acao": "A atividade será reagendada com escolta ou avaliada quanto à viabilidade técnica.",
+      "obs": "✅ Constatada presença de conflitos ou situações de risco na localidade. Encaminhado ao COP para validação da visita."
+    },
+    "106": {
+      "fato": "Infraestrutura inadequada",
+      "causa": "Foi constatada a necessidade de adequações na infraestrutura do cliente antes da execução do serviço.",
+      "acao": "Cliente orientado sobre as adaptações necessárias para possibilitar a instalação.",
+      "obs": "✅ Necessário realizar adaptações elétricas/estruturais prévias. Encaminhado ao COP para validação da visita."
+    },
+    "107": {
+      "fato": "Poste inadequado",
+      "causa": "O poste disponível no local não atende aos requisitos técnicos para instalação.",
+      "acao": "Necessária substituição ou adequação do poste para prosseguimento da instalação.",
+      "obs": "✅ Poste com baixa altura, má conservação ou tipo inadequado. Encaminhado ao COP para validação da visita."
+    },
+    "108": {
+      "fato": "Falta de documentação",
+      "causa": "Cliente não apresentou a documentação necessária para a realização do serviço.",
+      "acao": "Necessário novo agendamento após regularização da documentação exigida.",
+      "obs": "✅ Faltou documento com foto, procuração ou outro documento exigido. Encaminhado ao COP para validação da visita."
+    },
+    "109": {
+      "fato": "Endereço não localizado",
+      "causa": "Não foi possível localizar o endereço informado na ordem de serviço.",
+      "acao": "Necessário confirmar o endereço correto para reagendamento.",
+      "obs": "✅ O técnico realizou buscas no entorno e tentou contato com o cliente sem sucesso. Encaminhado ao COP para validação da visita."
+    },
+    "110": {
+      "fato": "Atividade cancelada pelo cliente",
+      "causa": "O cliente solicitou o cancelamento da atividade no momento da visita técnica.",
+      "acao": "Atendendo à solicitação do cliente, a ordem de serviço será cancelada.",
+      "obs": "✅ Motivo informado: cliente desistiu do serviço. Encaminhado ao COP para validação da visita e baixa na ordem de serviço."
+    },
+    "560": {
+      "fato": "Equipamento não recuperado",
+      "causa": "Após tentativas de recuperação do equipamento com defeito, não foi possível restaurar o seu funcionamento.",
+      "acao": "Realizada a substituição completa do dispositivo por um novo, devidamente configurado.",
+      "obs": "✅ Novo equipamento testado e funcionando corretamente. Cliente orientado sobre o uso adequado."
+    },
+    "561": {
+      "fato": "Caixa de Emenda Danificada",
+      "causa": "Identificada caixa de emenda óptica danificada que causava interrupções intermitentes no serviço.",
+      "acao": "Realizada a substituição completa da caixa de emenda, incluindo a refusão de todas as fibras afetadas.",
+      "obs": "✅ Serviço normalizado após a intervenção. Realizados testes de potência e estabilidade com resultados positivos."
+    },
+    "562": {
+      "fato": "SWT ONU",
+      "causa": "A ONU apresentava falhas de conexão que comprometiam a qualidade do serviço.",
+      "acao": "Realizada a substituição da ONU por um novo equipamento, configurado e testado em todos os pontos de acesso.",
+      "obs": "✅ Confirmada a estabilidade da conexão durante e após os testes. Cliente orientado sobre o funcionamento do novo equipamento."
+    },
+    "563": {
+      "fato": "Jumper Óptico com Defeito",
+      "causa": "Jumper óptico apresentava defeito que comprometia a qualidade e estabilidade do sinal.",
+      "acao": "Substituído o jumper óptico defeituoso por um novo componente de acordo com as especificações técnicas.",
+      "obs": "✅ Após a troca, foram realizados testes de potência que verificaram a normalização completa da conexão."
+    },
+    "564": {
+      "fato": "Problemas intermitentes solucionados",
+      "causa": "Cliente relatava problemas intermitentes de conexão causados por múltiplos fatores técnicos.",
+      "acao": "Realizado diagnóstico completo com execução de ajustes de configuração, otimização de sinal e substituição preventiva de conectores.",
+      "obs": "✅ Serviço normalizado após intervenção técnica. Realizados testes extensivos que confirmaram a resolução dos problemas."
+    },
+    "565": {
+      "fato": "Conector Óptico Danificado",
+      "causa": "O conector óptico apresentava danos que comprometiam a qualidade e estabilidade do sinal.",
+      "acao": "Realizada a substituição do conector danificado por um novo, instalado seguindo as especificações técnicas.",
+      "obs": "✅ Testes após a substituição apresentaram níveis de sinal dentro dos parâmetros ideais. Serviço normalizado."
+    },
+    "566": {
+      "fato": "Cabo Drop Danificado",
+      "causa": "O cabo drop encontrava-se danificado (cortado ou rompido).",
+      "acao": "Foi efetuada a substituição do cabo, conectores e anel de vedação.",
+      "obs": "✓ Manutenção preventiva interna realizada para evitar falhas futuras. Serviço realizado sem danos ao local."
+    },
+    "567": {
+      "fato": "Cordão Óptico Danificado",
+      "causa": "Identificado cordão óptico danificado que causava instabilidade na conexão do cliente.",
+      "acao": "Realizada a substituição por novo cordão óptico de qualidade, seguindo as especificações técnicas.",
+      "obs": "✅ Após a substituição, foram realizados testes de potência que confirmaram a normalização do serviço."
+    },
+    "568": {
+      "fato": "Roseta Danificada",
+      "causa": "A roseta óptica apresentava danos físicos que comprometiam a conexão e estabilidade do serviço.",
+      "acao": "Realizada a substituição completa da roseta, incluindo reposicionamento adequado e fixação segura.",
+      "obs": "✅ Testes após a intervenção confirmaram a normalização do serviço. Cliente orientado sobre cuidados com o equipamento."
+    },
+    "569": {
+      "fato": "CEO - Caixa de Emenda Óptica",
+      "causa": "A caixa de emenda óptica apresentava problemas de vedação e organização interna, causando degradação do sinal.",
+      "acao": "Realizada manutenção completa na CEO, com reorganização das fibras, refeitas as fusões necessárias e aplicada vedação adequada.",
+      "obs": "✅ Após a intervenção, foram realizados testes que confirmaram a estabilização e melhoria significativa do sinal."
+    },
+    "570": {
+      "fato": "Instalação de jumper",
+      "causa": "Rota de conexão apresentava atenuação excessiva que comprometia a qualidade do serviço.",
+      "acao": "Instalado novo jumper óptico para otimização da rota, incluindo fixação adequada segundo normas técnicas.",
+      "obs": "✅ Testes após a instalação confirmaram a melhoria na qualidade do sinal e estabilidade da conexão."
+    },
+    "571": {
+      "fato": "ONU Ressincronizada",
+      "causa": "A ONU apresentava problemas de sincronização com a rede que comprometiam a estabilidade da conexão.",
+      "acao": "Realizado procedimento completo de ressincronização, incluindo reset de fábrica e reconfiguração de todos os parâmetros.",
+      "obs": "✅ Conexão normalizada após o procedimento. Cliente orientado sobre o funcionamento correto do equipamento."
+    },
+    "572": {
+      "fato": "Substituição de PTO",
+      "causa": "O Ponto de Terminação Óptica apresentava danos que comprometiam a conexão e estabilidade do serviço.",
+      "acao": "Realizada a substituição completa do PTO, incluindo a reorganização das fibras e instalação de novos encaixes.",
+      "obs": "✅ Serviço testado após a intervenção, apresentando normalização completa. Cliente orientado sobre cuidados com o equipamento."
+    },
+    "573": {
+      "fato": "Rede Interna Otimizada",
+      "causa": "A rede interna do cliente apresentava ineficiências que comprometiam o desempenho geral do serviço.",
+      "acao": "Realizada otimização completa, incluindo reorganização do cabeamento, eliminação de emendas desnecessárias e ajustes de rotas.",
+      "obs": "✅ Serviço testado em todos os pontos de acesso após a otimização, com melhoria significativa no desempenho. Cliente orientado sobre manutenção."
+    },
+    "574": {
+      "fato": "Wi-Fi Otimizado",
+      "causa": "Cliente relatava problemas de cobertura e desempenho na rede Wi-Fi que comprometiam a experiência de uso.",
+      "acao": "Realizados ajustes nas configurações, incluindo otimização de canal, posicionamento de equipamentos e configurações de segurança.",
+      "obs": "✅ Cliente orientado sobre melhores práticas de uso da rede sem fio e posicionamento ideal de equipamentos para máxima cobertura."
+    },
+    "575": {
+      "fato": "Fibra Óptica Rompida",
+      "causa": "Identificado rompimento na fibra óptica que causava a interrupção total do serviço.",
+      "acao": "Realizada fusão da fibra afetada, seguindo procedimentos técnicos precisos para garantir mínima perda de sinal.",
+      "obs": "✅ Testes de potência após a intervenção confirmaram a restauração completa da conexão dentro dos parâmetros ideais."
+    },
+    "576": {
+      "fato": "Reparo em Splitter",
+      "causa": "O splitter óptico apresentava problemas que causavam degradação do sinal e instabilidade na conexão.",
+      "acao": "Realizado reparo completo, incluindo reposicionamento, limpeza de conectores e ajustes técnicos necessários.",
+      "obs": "✅ Testes de potência em todas as saídas após o reparo confirmaram a normalização do serviço e estabilidade da conexão."
+    },
+    "577": {
+      "fato": "Troca de Fonte da ONU",
+      "causa": "A fonte de alimentação da ONU apresentava falhas que causavam reinicializações frequentes do equipamento.",
+      "acao": "Realizada a substituição por nova fonte original, com especificações técnicas adequadas ao equipamento.",
+      "obs": "✅ Testes de estabilidade após a substituição confirmaram a resolução do problema. Cliente orientado sobre cuidados com a alimentação elétrica."
+    },
+    "578": {
+      "fato": "Refusão Urgente",
+      "causa": "A conexão apresentava perda crítica de sinal devido a problema na fusão da fibra óptica.",
+      "acao": "Realizado procedimento de refusão em caráter urgente, incluindo preparação adequada das extremidades e fusão precisa.",
+      "obs": "✅ Testes após o procedimento confirmaram a recuperação total do sinal. Cliente informado sobre a natureza do problema e solução aplicada."
+    },
+    "579": {
+      "fato": "Sinal Óptico Normalizado",
+      "causa": "O cliente apresentava problemas de instabilidade devido à degradação do sinal óptico abaixo dos parâmetros aceitáveis.",
+      "acao": "Realizadas intervenções no trecho afetado, incluindo limpeza de conectores e ajustes nas terminações ópticas.",
+      "obs": "✅ Medições após a intervenção confirmaram a normalização do nível de sinal, restaurando a estabilidade do serviço."
+    },
+    "580": {
+      "fato": "Hardware com defeito",
+      "causa": "Identificado defeito de hardware que comprometia o funcionamento adequado do equipamento e qualidade do serviço.",
+      "acao": "Realizada a substituição completa da unidade afetada por equipamento novo, seguida de configuração conforme necessidades do cliente.",
+      "obs": "✅ Testes extensivos após a substituição confirmaram a resolução do problema. Cliente orientado sobre o uso do novo equipamento."
+    },
+    "581": {
+      "fato": "Troca de Switch",
+      "causa": "O switch apresentava falhas em portas e instabilidade geral que comprometiam toda a rede local.",
+      "acao": "Realizada a substituição por equipamento novo, incluindo transferência cuidadosa de todas as configurações anteriores.",
+      "obs": "✅ Testes de conectividade em todos os pontos de rede após a substituição confirmaram o funcionamento normalizado do serviço."
+    },
+    "582": {
+      "fato": "Ajuste de Potência Óptica",
+      "causa": "Os níveis de potência óptica estavam fora dos parâmetros ideais, causando instabilidade e degradação do serviço.",
+      "acao": "Realizados ajustes técnicos precisos para normalização dos níveis, incluindo otimização de rotas e ajustes nos conectores.",
+      "obs": "✅ Medições após os ajustes confirmaram a melhoria significativa nos níveis de potência e consequente estabilização do serviço."
+    },
+    "583": {
+      "fato": "Cabeamento Inadequado",
+      "causa": "O cabeamento existente não suportava a capacidade contratada, causando limitações de desempenho e instabilidade.",
+      "acao": "Substituído o cabeamento por categoria apropriada, seguindo normas técnicas para garantir máximo desempenho.",
+      "obs": "✅ Testes após a substituição confirmaram o desempenho esperado. Cliente orientado sobre os benefícios da nova infraestrutura."
+    },
+    "584": {
+      "fato": "Adaptador Óptico Substituído",
+      "causa": "O adaptador óptico apresentava desgaste e causava instabilidade na conexão devido ao mau contato.",
+      "acao": "Realizada a substituição por novo componente, instalado com alinhamento preciso para garantir máxima eficiência.",
+      "obs": "✅ Testes após a substituição confirmaram a normalização do serviço. Cliente orientado sobre cuidados com os equipamentos ópticos."
+    },
+    "585": {
+      "fato": "Redimensionamento de Rede",
+      "causa": "A topologia da rede não atendia adequadamente às necessidades atuais do cliente, causando limitações de uso.",
+      "acao": "Realizado redimensionamento completo, incluindo redistribuição de pontos de acesso e otimização geral da topologia.",
+      "obs": "✅ Testes completos após as alterações confirmaram a melhoria significativa no desempenho. Cliente orientado sobre a nova configuração."
+    },
+    "586": {
+      "fato": "Manutenção Preventiva",
+      "causa": "Identificados fatores de risco que poderiam causar falhas futuras no sistema de conexão do cliente.",
+      "acao": "Executada manutenção preventiva completa, incluindo limpeza de conectores, verificação de potência e ajustes de fixação.",
+      "obs": "✅ Testes gerais de desempenho após a manutenção confirmaram a otimização do sistema, garantindo maior estabilidade futura."
+    },
+    "587": {
+      "fato": "Eliminação de Interferência",
+      "causa": "Identificada fonte de interferência que comprometia o desempenho da rede, especialmente nas conexões sem fio.",
+      "acao": "Implementada solução que envolveu reposicionamento de equipamentos, blindagem de cabos e ajustes de configuração.",
+      "obs": "✅ Testes comparativos confirmaram resultados positivos significativos após a intervenção. Cliente orientado sobre manutenção do ambiente otimizado."
+    },
+    "588": {
+      "fato": "Conectorização Refeita",
+      "causa": "A conectorização existente apresentava problemas técnicos que comprometiam a qualidade e estabilidade do sinal.",
+      "acao": "Todo o processo de conectorização foi refeito seguindo especificações técnicas precisas para garantir máxima eficiência.",
+      "obs": "✅ Medições após o procedimento confirmaram melhoria significativa nos parâmetros de conexão e estabilidade geral do serviço."
+    },
+    "589": {
+      "fato": "Terminação Óptica Otimizada",
+      "causa": "A terminação óptica apresentava imperfeições que causavam perda de sinal e instabilidade na conexão.",
+      "acao": "Realizada otimização completa, incluindo polimento adequado, limpeza especializada e ajustes precisos nas terminações.",
+      "obs": "✅ Testes comparativos confirmaram melhoria significativa na qualidade e estabilidade do sinal após a intervenção técnica."
+    },
+    "590": {
+      "fato": "Porta Ethernet Substituída",
+      "causa": "A porta ethernet apresentava danos físicos ou eletrônicos que impossibilitavam a conexão estável.",
+      "acao": "Realizado o redirecionamento para porta funcional e, em seguida, a substituição completa do equipamento afetado.",
+      "obs": "✅ Testes de conectividade após a intervenção confirmaram a resolução completa do problema e estabilização do serviço."
+    },
+    "591": {
+      "fato": "Configuração Avançada",
+      "causa": "O cliente necessitava de configurações específicas para otimizar o desempenho conforme seu perfil de uso da rede.",
+      "acao": "Implementadas configurações avançadas personalizadas, incluindo ajustes em QoS, segmentação de rede e protocolos de roteamento.",
+      "obs": "✅ Testes práticos confirmaram resultados positivos após as alterações. Cliente orientado sobre os benefícios das novas configurações."
+    },
+    "592": {
+      "fato": "Sistema Reinicializado",
+      "causa": "O sistema apresentava problemas de software que causavam instabilidade e comprometiam o desempenho geral.",
+      "acao": "Realizado procedimento completo de reinicialização, incluindo backup de configurações, reset controlado e restauração otimizada.",
+      "obs": "✅ Monitoramento após o procedimento confirmou a resolução dos problemas e estabilização completa do sistema."
+    },
+    "593": {
+      "fato": "Receptor Óptico Substituído",
+      "causa": "O receptor óptico apresentava sensibilidade reduzida devido a desgaste, comprometendo a qualidade do serviço.",
+      "acao": "Realizada a substituição completa do componente por unidade nova, seguida de calibração precisa conforme especificações.",
+      "obs": "✅ Testes após a substituição confirmaram a normalização dos parâmetros e consequente melhoria na qualidade do serviço."
+    },
+    "594": {
+      "fato": "Falha Intermitente Solucionada",
+      "causa": "O cliente experimentava falhas que ocorriam de forma não constante, dificultando o diagnóstico e causando frustrações.",
+      "acao": "Realizada análise detalhada que identificou padrões de ocorrência, permitindo ajustes preventivos nos componentes afetados.",
+      "obs": "✅ Monitoramento prolongado após a intervenção confirmou a solução efetiva do problema e estabilização permanente do serviço."
+    },
+    "595": {
+      "fato": "Atualização de Firmware",
+      "causa": "O firmware desatualizado criava vulnerabilidades e limitações de desempenho que comprometiam o serviço.",
+      "acao": "Realizada atualização para a versão mais recente, com backup preventivo e verificação completa após o procedimento.",
+      "obs": "✅ Testes comparativos confirmaram melhoria significativa no desempenho e segurança após a atualização. Cliente informado sobre os benefícios."
+    },
+    "596": {
+      "fato": "Recuperação de Serviço Crítico",
+      "causa": "O sistema apresentava falha total em serviço essencial para o cliente, causando impacto significativo em suas atividades.",
+      "acao": "Executado procedimento de emergência que envolveu diagnóstico rápido e ação precisa nos componentes afetados.",
+      "obs": "✅ Verificação após a intervenção confirmou o restabelecimento completo das funcionalidades. Cliente orientado sobre prevenção de novas ocorrências."
+    },
+    "597": {
+      "fato": "Ajustes Finais em Instalação",
+      "causa": "A instalação recente apresentava pequenas inconsistências que, embora não impedissem o funcionamento, comprometiam a otimização.",
+      "acao": "Realizados ajustes finais detalhados, incluindo otimizações em configurações e fixações complementares para máxima eficiência.",
+      "obs": "✅ Testes abrangentes após os ajustes confirmaram o funcionamento ideal de todos os componentes do sistema instalado."
+    },
+    "598": {
+      "fato": "Recuperação pós-Queda de Energia",
+      "causa": "O sistema apresentava instabilidade após queda de energia que causou desconfiguração de parâmetros essenciais.",
+      "acao": "Realizado procedimento completo de verificação, reinicialização controlada e recalibração de todos os parâmetros afetados.",
+      "obs": "✅ Monitoramento após a intervenção confirmou o restabelecimento do funcionamento normal de todos os componentes do sistema."
+    },
+    "599": {
+      "fato": "Reconfiguração Completa",
+      "causa": "O sistema apresentava problemas crônicos de desempenho que indicavam necessidade de revisão integral das configurações.",
+      "acao": "Executada reconfiguração completa com redefinição de todos os parâmetros críticos e aplicação de configurações personalizadas.",
+      "obs": "✅ Testes comparativos confirmaram melhoria significativa no desempenho geral após a reconfiguração integral do sistema."
+    }
+  }
+}

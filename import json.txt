@@ -1,0 +1,146 @@
+import json
+import logging
+import os
+import sys
+import time
+from datetime import datetime
+
+from telegram import Update
+from telegram.ext import Application, CommandHandler, ContextTypes
+from telegram.error import TelegramError
+
+# Configure logging
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+logger = logging.getLogger('bot')
+
+def load_templates():
+    """Load templates from JSON file."""
+    try:
+        with open('report_templates.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        logger.error(f"Error loading templates: {e}")
+        # Return empty templates structure in case of error
+        return {
+            "baixa": {},
+            "fac": {}
+        }
+
+# Command handlers
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Send a welcome message when the command /start is issued."""
+    await update.message.reply_text(
+        "Olá! Sou o Bot de Relatórios de Serviço.\n\n"
+        "Comandos disponíveis:\n"
+        "/baixa [número] - Gera descrição detalhada da baixa\n"
+        "/fac [número] - Gera Ficha de Atendimento ao Cliente\n"
+        "/restart - Reinicia o bot (apenas para administradores)\n"
+        "/help - Mostra ajuda detalhada sobre os comandos"
+    )
+
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Send help message when the command /help is issued."""
+    help_text = (
+        "📋 *Ajuda do Bot de Relatórios* 📋\n\n"
+        "*O que este bot faz?*\n"
+        "Este bot foi desenvolvido para auxiliar técnicos e equipes de suporte na geração rápida e padronizada "
+        "de relatórios de atendimento, utilizando os códigos de baixa e FAC (Ficha de Atendimento ao Cliente).\n\n"
+        
+        "📌 *Comandos disponíveis*\n\n"
+        
+        "*/baixa [número]*\n"
+        "Gera a descrição detalhada da baixa correspondente ao número informado.\n"
+        "Exemplo:\n"
+        "`/baixa 103`\n"
+        "Resposta:\n"
+        "```\n103 - Chuva\nA execução do serviço foi impossibilitada devido à ocorrência de chuvas intensas no momento da visita técnica. A atividade será reagendada conforme as condições climáticas permitirem. Encaminhado ao COP para validação da visita.```\n\n"
+        
+        "*/fac [número]*\n"
+        "Gera a Ficha de Atendimento ao Cliente (FAC) correspondente ao número informado.\n"
+        "Exemplo:\n"
+        "`/fac 103`\n"
+        "Resposta:\n"
+        "```\nFAC-103\nCONTRATO: [número do contrato]\nFATO: Chuva\nCAUSA: A execução do serviço foi impossibilitada devido à ocorrência de chuvas intensas no momento da visita técnica.\nAÇÃO: A atividade será reagendada conforme as condições climáticas permitirem.\nOBS: ✅ Encaminhado ao COP para validação da visita.```\n\n"
+        
+        "*/restart*\n"
+        "Reinicia o bot em caso de problemas ou após atualizações.\n"
+        "Este comando só está disponível para administradores."
+    )
+    await update.message.reply_text(help_text, parse_mode='Markdown')
+
+async def baixa_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Generate a 'baixa' report."""
+    templates = load_templates()
+    
+    if not context.args:
+        await update.message.reply_text(
+            "Por favor, forneça o número da baixa. Exemplo: `/baixa 103`",
+            parse_mode='Markdown'
+        )
+        return
+    
+    code = context.args[0]
+    baixa_templates = templates.get("baixa", {})
+    
+    if code in baixa_templates:
+        template = baixa_templates[code]
+        response = (
+            f"{code} - {template['title']}\n"
+            f"{template['description']}"
+        )
+        await update.message.reply_text(response)
+    else:
+        await update.message.reply_text(
+            "Código de baixa não encontrado. Verifique o número e tente novamente."
+        )
+
+async def fac_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Generate a 'FAC' report."""
+    templates = load_templates()
+    
+    if not context.args:
+        await update.message.reply_text(
+            "Por favor, forneça o número da FAC. Exemplo: `/fac 103`",
+            parse_mode='Markdown'
+        )
+        return
+    
+    code = context.args[0]
+    fac_templates = templates.get("fac", {})
+    
+    if code in fac_templates:
+        template = fac_templates[code]
+        response = (
+            f"FAC-{code}\n"
+            f"CONTRATO: [número do contrato]\n"
+            f"FATO: {template['fato']}\n"
+            f"CAUSA: {template['causa']}\n"
+            f"AÇÃO: {template['acao']}\n"
+            f"OBS: {template['obs']}"
+        )
+        await update.message.reply_text(response)
+    else:
+        await update.message.reply_text(
+            "Código de FAC não encontrado. Verifique o número e tente novamente."
+        )
+        
+async def grupo_baixa_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Versão otimizada do comando baixa para grupos."""
+    templates = load_templates()
+    
+    if not context.args:
+        await update.message.reply_text(
+            "Por favor, forneça o número da baixa. Exemplo: `/grupo_baixa 103`",
+            parse_mode='Markdown'
+        )
+        return
+    
+    code = context.args[0]
+    baixa_templates = templates.get("baixa", {})
+    
+    if code in baixa_templates:
+        template = baixa_templates[code]
+        # Versão simplificada para grupos

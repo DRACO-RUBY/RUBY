@@ -1,0 +1,87 @@
+app.py
+
+import os
+
+from flask import Flask, jsonify, render_template
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import DeclarativeBase
+from werkzeug.middleware.proxy_fix import ProxyFix
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+db = SQLAlchemy(model_class=Base)
+# create the app
+app = Flask(__name__)
+app.secret_key = os.environ.get("SESSION_SECRET")
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1) # needed for url_for to generate with https
+
+# configure the database, relative to the app instance folder
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "sqlite:///instance/bot.db")
+app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
+    "pool_recycle": 300,
+    "pool_pre_ping": True,
+}
+# initialize the app with the extension, flask-sqlalchemy >= 3.0.x
+db.init_app(app)
+
+with app.app_context():
+    # Make sure to import the models here or their tables won't be created
+    import models  # noqa: F401
+
+    db.create_all()
+
+
+@app.route("/")
+def index():
+    """Homepage for the ping server"""
+    from models import BotStatus
+    
+    # Get the latest status
+    status = BotStatus.query.order_by(BotStatus.id.desc()).first()
+    
+    return render_template('index.html', status=status)
+
+
+@app.route("/ping")
+def ping():
+    """Ping endpoint to keep the service awake"""
+    app.logger.debug("Ping received")
+    return jsonify(message="Pong! Bot is active")
+
+
+@app.route("/status")
+def status():
+    """Return the current status of the bot"""
+    from models import BotStatus
+    
+    # Get the latest status
+    status = BotStatus.query.order_by(BotStatus.id.desc()).first()
+    
+    if status:
+        response = {
+            "bot_status": status.status,
+            "start_time": status.start_time.isoformat(),
+            "last_ping": status.last_ping.isoformat() if status.last_ping else None,
+            "uptime_seconds": status.uptime
+        }
+    else:
+        response = {
+            "bot_status": "unknown",
+            "message": "No status recorded yet."
+        }
+    
+    return jsonify(response)
+
+
+def run_bot():
+    """Function to run the Telegram bot in a separate thread"""
+    from bot import start_bot
+    start_bot()
+
+
+if __name__ == "__main__":
+    run_bot()
+    app.run(debug=True, port=5000)
